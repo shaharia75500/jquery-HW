@@ -21,6 +21,9 @@ nav {
     font-family: 'Montserrat', sans-serif;
     position: relative;
 }
+nav .menu ul li{
+    position: relative;
+}
 nav .menu ul.row li a,
 nav .menu ul.row li i {
     color: #1377b9;
@@ -53,12 +56,24 @@ nav #search {
     position: absolute;
     font-family: 'Montserrat', sans-serif;
     top: 23%;
-    left: 23.5%;
+    right: 70px;
+    transform: scaleX(0);
+    transition: .5s;
+    transform-origin: right;
+}
+nav #search.active{
+    transform: scaleX(1);
 }
 nav .menu #slideBar {
     position: absolute;
     top: 100%;
     right: 0;
+    transform:scaleY(0) skew(45deg);
+    transform-origin: top;
+    transition: .5s;
+}
+nav .menu #slideBar.active{
+    transform: scaleY(1) skew(0deg);
 }
 nav .menu #slideBar ul li, 
 nav .menu #slideBar ul li a{
