@@ -63,7 +63,7 @@ nav .logo img {
     margin-left: 10px;
 }
 nav #search {
-    border: none;
+    border: 1px solid #1377b9;
     border-radius: 5px;
     font-size: 16px;
     background-color: #fff;
