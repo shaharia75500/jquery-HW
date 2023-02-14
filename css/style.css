@@ -16,10 +16,26 @@ li{
     justify-content: space-between;
     align-items: center;
 }
+body{
+    font-family: 'Montserrat', sans-serif;
+}
 nav {
     background-color: aliceblue;
-    font-family: 'Montserrat', sans-serif;
-    position: relative;
+}
+nav.active{
+    animation-name: fixedMenu;
+    animation-duration: .8s;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+}
+@keyframes fixedMenu {
+    from{
+        top:-100px
+    }
+    to{
+        top: 0;
+    }
 }
 nav .menu ul li{
     position: relative;
@@ -50,7 +66,8 @@ nav #search {
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    background-color: #c1e2f8;
+    background-color: #fff;
+    text-indent: 10px;
     color: #06263B;
     padding: 10px;
     position: absolute;
@@ -71,6 +88,7 @@ nav .menu #slideBar {
     transform:scaleY(0) skew(45deg);
     transform-origin: top;
     transition: .5s;
+    z-index: 999;
 }
 nav .menu #slideBar.active{
     transform: scaleY(1) skew(0deg);
@@ -82,3 +100,44 @@ nav .menu #slideBar ul li a{
     margin-bottom: 1px;
     color: #c1e2f8;
 }
+
+/* banner starts here */
+#banner .bannerSlider,
+#banner .bannerSlider div img {
+    width: 100%;
+    font-size: 0;
+} 
+/* banner ends here */
+
+/* about section starts here */
+#about {
+    margin: 100px auto;
+}
+.about h1 {
+    text-align: center;
+    color: #1377b9;
+    font-size: 30px;
+    margin: 30px 0;
+    text-transform: uppercase;
+}
+.about p {
+    line-height: 30px;
+    font-size: 16px;
+    color: #06263B;
+    padding: 0 50px;
+    word-spacing: 5px;
+}
+#backToTop{
+    padding: 10px 13px;
+    background-color: #4F96C6;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 999;
+    cursor: pointer;
+}
+/* about section ends here */
